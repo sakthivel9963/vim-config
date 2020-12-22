@@ -7,32 +7,45 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
+Plug 'sainnhe/gruvbox-material'
 
 call plug#end()
 
+set exrc
+set guicursor=
+set relativenumber
+set nohlsearch
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set termguicolors
+set scrolloff=8
+set noshowmode
+set completeopt=menuone,noinsert,noselect
+set signcolumn=yes
+
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-emmet', 'coc-css', 'coc-eslint', 'coc-html', 'coc-sh', 'coc-sql', 'coc-tsserver', 'coc-python', 'coc-tslint', 'coc-prettier', 'coc-snippets', 'coc-pairs']
 
-set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
+set background=dark
+"colorscheme gruvbox
 
-set number
-
-nnoremap <C-s> :w<CR>
-nnoremap <C-Q> :wq!<CR>
+"nnoremap <C-s> :w<CR>
+"nnoremap <C-Q> :wq!<CR>
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-set smarttab
-set cindent
-set tabstop=2 softtabstop=2
-set smartcase
-set wrap
-set noerrorbells
-set smartindent
-set shiftwidth=2
-" always uses spaces instead of tab characters
-set expandtab
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
